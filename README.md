@@ -141,3 +141,27 @@ sudo iw dev wlan0 set power_save off
 - **WLAN** — CM5 hat WiFi 5 (BCM4375) mit besserer Antennenabstimmung → 5 GHz könnte dann brauchbar sein
 - **GPU** — VideoCore 7 → Wayfire/niri für Carousel-Workspaces testbar
 - **Config** — Overlay in config.txt auf `clockworkpi-uconsole-cm5` ändern; Antenne testen (ant1/ant2)
+
+## SD-Karte (Datenträger)
+
+Der interne microSD-Slot wird als `/dev/mmcblk1` erkannt.
+
+### Automount
+SD-Karte einlegen → wird automatisch nach `/mnt/sd` gemountet.
+Bei Entfernung → automatisch unmountet.
+
+### Manuell
+Manuell einbinden per udisks2:
+```bash
+udisksctl mount -b /dev/mmcblk1p1
+``
+
+```bash
+lsblk  # prüfen ob SD erkannt wird
+mount | grep mmcblk1  # Mount-Point anzeigen
+```
+
+### Verwendung
+- Daten auslagern (Musik, Downloads, Docker)
+- Home-Verzeichnis auf SD auslagern für mehr eMMC-Platz
+- Backup-Ziel
