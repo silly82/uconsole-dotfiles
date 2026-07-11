@@ -135,3 +135,9 @@ sudo nmcli connection up <SSID>
 ```bash
 sudo iw dev wlan0 set power_save off
 ```
+
+## CM5 Upgrade
+
+- **WLAN** — CM5 hat WiFi 5 (BCM4375) mit besserer Antennenabstimmung → 5 GHz könnte dann brauchbar sein
+- **GPU** — VideoCore 7 → Wayfire/niri für Carousel-Workspaces testbar
+- **Config** — Overlay in config.txt auf `clockworkpi-uconsole-cm5` ändern; Antenne testen (ant1/ant2)
