@@ -45,7 +45,8 @@
         "format-wifi": "{signalStrength}%  \uf1eb",
         "format-ethernet": "eth \uf6ff",
         "format-disconnected": "off \u774a",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)"
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "on-click": "iwgtk"
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",
