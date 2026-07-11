@@ -1,0 +1,7 @@
+[terminal]
+vt = 7
+
+[default_session]
+# cage (Kiosk-Compositor) startet das gtkgreet-Wrapper-Skript
+command = "cage -s -- /usr/local/bin/greetd-gtkgreet-run"
+user = "_greetd"

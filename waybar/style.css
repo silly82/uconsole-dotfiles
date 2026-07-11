@@ -1,0 +1,40 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Fira Code, Symbols Nerd Font, monospace;
+    font-size: 12px;
+    min-height: 0;
+}
+window#waybar {
+    background: rgba(30, 30, 46, 0.85);
+    color: #cdd6f4;
+}
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: #cdd6f4;
+}
+#workspaces button.focused {
+    background: #45475a;
+    color: #89b4fa;
+}
+#workspaces button.urgent {
+    background: #f38ba8;
+    color: #1e1e2e;
+}
+#clock, #battery, #network, #pulseaudio, #backlight, #mode {
+    padding: 0 8px;
+}
+#battery.warning { color: #f9e2af; }
+#battery.critical { color: #f38ba8; }
+#network.disconnected { color: #f38ba8; }
+#mode { background: #f9e2af; color: #1e1e2e; }
+
+#custom-logout {
+    padding: 0 8px;
+    color: #f38ba8;
+}
+#custom-logout:hover {
+    background: #f38ba8;
+    color: #1e1e2e;
+}

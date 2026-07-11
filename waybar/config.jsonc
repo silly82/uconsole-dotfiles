@@ -1,0 +1,76 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 22,
+    "spacing": 4,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "custom/logout"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "network",
+        "battery"
+    ],
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}"
+    },
+    "clock": {
+        "format": "{:%a %d.%m  %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "battery": {
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": [
+            "\uf240",
+            "\uf241",
+            "\uf242",
+            "\uf243",
+            "\uf244"
+        ]
+    },
+    "network": {
+        "format-wifi": "{signalStrength}%  \uf1eb",
+        "format-ethernet": "eth \uf6ff",
+        "format-disconnected": "off \u774a",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "mute \uf466",
+        "format-icons": {
+            "default": [
+                "\uf026",
+                "\uf027",
+                "\uf028"
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "device": "backlight@0",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "\uf185",
+            "\uf185"
+        ]
+    },
+    "custom/logout": {
+        "format": "\uf011",
+        "tooltip": "Sway beenden",
+        "on-click": "swaynag -t warning -m 'Sway beenden?' -B 'Ja, beenden' 'swaymsg exit'",
+        "interval": "once"
+    }
+}

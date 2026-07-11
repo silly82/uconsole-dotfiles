@@ -1,0 +1,4 @@
+#!/bin/sh
+# Wird von cage ausgefuehrt. Dreht Display, startet dann gtkgreet.
+( sleep 1; /usr/bin/wlr-randr --output DSI-1 --transform 270 --scale 1.25 ) &
+exec /usr/bin/gtkgreet
