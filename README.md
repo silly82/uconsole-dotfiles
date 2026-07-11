@@ -119,3 +119,19 @@ sudo nmcli connection up "4G"
 - Firmware: LE20B04SIM7600G22
 - Status: `mmcli -m 0`
 - Power via GPIO 15/24 (uconsole-4g Skript)
+
+## WLAN — Signalverbesserung
+
+Das CM4-Modul im Gehäuse hat oft schwachen 5-GHz-Empfang.
+Auf 2.4 GHz zwingen (deutlich bessere Reichweite):
+
+```bash
+sudo nmcli connection modify <SSID> 802-11-wireless.band bg
+sudo nmcli connection down <SSID>
+sudo nmcli connection up <SSID>
+```
+
+### Power Save deaktivieren
+```bash
+sudo iw dev wlan0 set power_save off
+```
