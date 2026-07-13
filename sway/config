@@ -27,7 +27,7 @@ output DSI-2 {
 }
 
 ### Hintergrund
-output * bg #1e1e2e solid_color
+output * bg /home/silly82/.config/sway/wallpaper.png fill
 
 ### Idle / Bildschirm aus (Handheld: Akku sparen)
 exec swayidle -w \

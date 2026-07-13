@@ -82,8 +82,39 @@ sudo systemctl enable --now greetd
 | Symbol | Klick | Aktion |
 |---|---|---|
 |  | Linksklick | Sway beenden (mit Bestätigung) |
-|  | Linksklick | iwgtk (WLAN-Auswahl) |
+|  | Linksklick | nmtui (NetworkManager TUI) |
 | 🔊 | Linksklick | pavucontrol (Audio-Einstellungen) |
+
+## Sway Shortcuts Wallpaper
+
+Ein Hintergrundbild (`sway/wallpapers/wallpaper.png`) mit allen wichtigen Sway-Shortcuts in zwei Spalten, erstellt mit Pillow. Aktiviert in der Sway-Config via `output * bg ... fill`.
+
+## Installierte Apps
+
+| App | Zweck |
+|---|---|
+| **Tuba** (0.9.2) | Mastodon/Fediverse-Client (GTK4/libadwaita, für kleines Display optimiert) |
+| **Raspberry Pi Connect** (2.12.0) | Remote-Zugriff via connect.raspberrypi.com (aktiv, signiert) |
+
+### Raspberry Pi Connect einrichten
+```bash
+rpi-connect signin   # öffnet OAuth-Link → im Browser anmelden
+```
+
+### Netzwerk-GUI später nachrüsten
+```bash
+sudo apt install network-manager-gnome   # nm-connection-editor (GTK-GUI)
+# Danach in waybar/config.jsonc: "on-click" ändern auf "nm-connection-editor"
+```
+
+## Netzwerk-Status (aktuell)
+
+| Interface | IP | Verbindung |
+|---|---|---|
+| `eth1` | 192.168.1.43 | Ethernet |
+| `wlan0` | 192.168.1.44 | WiFi — figaro |
+
+---
 
 ## 4G/LTE Modul (SIMCOM SIM7600G-H)
 

@@ -46,7 +46,7 @@
         "format-ethernet": "eth \uf6ff",
         "format-disconnected": "off \u774a",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
-        "on-click": "iwgtk"
+        "on-click": "foot -e nmtui"
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",
